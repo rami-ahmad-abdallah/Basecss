@@ -1,0 +1,26 @@
+@mixin card($head-bg-color: white) {
+    border-radius: $base-radius;
+    box-shadow: $base-shadow;
+    overflow: hidden;
+    margin: $base-margin*2;
+
+    .card-head {
+        padding: $base-padding;
+        background-color: $head-bg-color;
+        color: set-text-color($head-bg-color);
+    }
+
+    .card-body {
+        padding: $base-padding;
+    }
+}
+
+.card {
+    @include card();
+}
+
+@each $key, $val in $colors {
+    .card-#{$key} {
+        @include card($val);
+    }
+}

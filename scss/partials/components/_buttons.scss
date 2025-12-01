@@ -1,0 +1,39 @@
+.btn {
+    padding: $base-padding ;
+    border: 0;
+    border-radius: $base-radius;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: $base-margin;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@each $key, $val in $colors {
+    .btn-#{$key} {
+        @extend .btn;
+        background-color: $val;
+        color: set-text-color($val);
+
+        &:hover {
+            background-color: darken($val, $amount: 5);
+            color: set-text-color(darken($val, $amount: 5));
+        }
+    }
+
+    .btn-#{$key}-outlined {
+        @extend .btn;
+        border: $base-border solid $val;
+        color: $val;
+        background-color: white;
+
+        &:hover {
+            color: set-text-color($val);
+            background-color: $val;
+        }
+    }
+}

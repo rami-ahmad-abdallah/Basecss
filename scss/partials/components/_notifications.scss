@@ -1,0 +1,35 @@
+@mixin notification($head-bg-color: white) {
+  border-radius: $base-radius;
+  box-shadow: $base-shadow;
+  overflow: hidden;
+  margin: $base-margin * 2;
+  max-width: $base-mobile-width;
+  display: inline-block;
+
+  .notification-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $base-padding;
+    background-color: $head-bg-color;
+    color: set-text-color($head-bg-color);
+
+    .close-btn {
+      @include close-btn($head-bg-color);
+    }
+  }
+
+  .notification-body {
+    padding: $base-padding;
+  }
+}
+
+.notification {
+  @include notification();
+}
+
+@each $key, $val in $colors {
+  .notification-#{$key} {
+    @include notification($val);
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        .links {
+            position: fixed;
+            top: 50%;
+            left: 105%;
+            background: rgb(61, 61, 61);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            transform-origin: center;
+            overflow: hidden;
+
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -50%) rotateZ(0deg);
+        }
+
+        .show {
+            animation-name: show-links;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-direction: normal;
+        }
+
+        @keyframes show-links {
+            0% {
+                left: 105%;
+                transform: translate(-50%, -50%) rotateZ(0deg);
+                width: 30px;
+                height: 30px;
+            }
+
+
+            50% {
+                left: 50%;
+                transform: translate(-50%, -50%) rotateZ(-360deg);
+                width: 30px;
+                height: 30px;
+            }
+
+            100% {
+                left: 50%;
+                transform: translate(-50%, -50%) rotateZ(-360deg);
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .close {
+            animation-name: close-links;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-direction: normal;
+        }
+
+        @keyframes close-links {
+            0% {
+                left: 50%;
+                transform: translate(-50%, -50%) rotateZ(-360deg);
+                width: 100%;
+                height: 100%;
+            }
+
+
+            50% {
+                left: 50%;
+                transform: translate(-50%, -50%) rotateZ(-360deg);
+                width: 30px;
+                height: 30px;
+            }
+
+            100% {
+                left: -5%;
+                transform: translate(-50%, -50%) rotateZ(-720deg);
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .links a {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            width: max-content;
+            margin: 10px auto;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .animation-ended a {
+            opacity: 1;
+        }
+
+        .links a:hover {
+            color: black;
+            background: #ffffffa3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="">
+        <div class="container flex justify-between align-center p-2">
+            <div class="nav-logo">
+                LOGO
+            </div>
+
+            <div class="links">
+                <a href="">Link 1</a>
+                <a href="">Link 2</a>
+                <a href="">Link 3</a>
+                <a href="">Link 4</a>
+                <a href="">Link 5</a>
+                <a href="">Link 6</a>
+                <a href="" class="close-links">X close menu</a>
+            </div>
+
+            <div class="burger">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.links');
+        const closeLinks = document.querySelector('.close-links');
+
+        burger.addEventListener('click', (e) => {
+            e.preventDefault();
+            navLinks.classList.add('show');
+        });
+
+        navLinks.addEventListener('animationend', () => {
+            navLinks.classList.add('animation-ended');
+            if (navLinks.classList.contains('close')) {
+                navLinks.classList.remove('animation-ended', 'show', 'close');
+            }
+
+        });
+
+        closeLinks.addEventListener('click', (e) => {
+            e.preventDefault();
+            navLinks.classList.remove('animation-ended');
+            navLinks.classList.add('close');
+        });
+    </script>
+</body>
+
+</html>

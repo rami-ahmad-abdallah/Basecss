@@ -1,0 +1,49 @@
+$positionsMap: (absolute, fixed, relative, static, sticky);
+
+@each $key in $positionsMap {
+  .#{$key} {
+    position: $key;
+  }
+}
+
+$displayMap: (flex, block, inline-block, inline-flex, grid);
+@each $key in $displayMap {
+  .#{$key} {
+    display: $key;
+  }
+}
+
+// ALIGN FOR FLEX
+$alignMap: (
+  "align-baseline": baseline,
+  "align-center": center,
+  "align-start": start,
+  "align-end": end,
+);
+@each $key, $val in $alignMap {
+  .#{$key} {
+    align-items: $val;
+  }
+}
+
+$justifyMap: (
+  "justify-baseline": baseline,
+  "justify-center": center,
+  "justify-between": space-between,
+  "justify-evenly": space-evenly,
+  "justify-around": space-around,
+  "justify-start": flex-start,
+  "justify-end": flex-end,
+);
+@each $key, $val in $justifyMap {
+  .#{$key} {
+    justify-content: $val;
+  }
+}
+
+// GAPS
+@each $val in $utilitiesValues {
+  .gap-#{$val} {
+    gap: $base-gap * $val;
+  }
+}

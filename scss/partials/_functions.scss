@@ -1,0 +1,24 @@
+@use "sass:color";
+
+// Function to determine suitable text color
+@function set-text-color($bg-color, $dark-text: #000000, $light-text: #ffffff) {
+
+    // Extract RGB values
+    $r: color.channel($bg-color, "red", $space: rgb);
+    $g: color.channel($bg-color, "green", $space: rgb);
+    $b: color.channel($bg-color, "blue", $space: rgb);
+
+    // Calculate YIQ value (perceived brightness)
+    // Formula: ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+    $yiq: (
+        ($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+    // Return dark text for light backgrounds, and light text for dark backgrounds
+    @if ($yiq >=128) {
+        @return $dark-text;
+    }
+
+    @else {
+        @return $light-text;
+    }
+}

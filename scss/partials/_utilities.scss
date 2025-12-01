@@ -1,0 +1,30 @@
+@each $classStart, $property in $uMap {
+    @each $val in $utilitiesValues {
+        .#{$classStart}-#{$val} {
+            #{$property}: $val * $base-padding;
+        }
+    }
+
+}
+
+@each $val in $utilitiesValues {
+    .px-#{$val} {
+        padding-left: $val * $base-padding;
+        padding-right: $val * $base-padding;
+    }
+
+    .py-#{$val} {
+        padding-top: $val * $base-padding;
+        padding-bottom: $val * $base-padding;
+    }
+
+    .mx-#{$val} {
+        margin-left: $val * $base-margin;
+        margin-right: $val * $base-margin;
+    }
+
+    .my-#{$val} {
+        margin-top: $val * $base-margin;
+        margin-bottom: $val * $base-margin;
+    }
+}

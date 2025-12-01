@@ -1,0 +1,42 @@
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/breakpoints";
+@import "partials/colors";
+@import "partials/utilities";
+@import "partials/customClasses";
+@import "partials/positions";
+
+// COMPONENTS
+@import "partials/components/buttons";
+@import "partials/components/cards";
+@import "partials/components/notifications";
+@import "partials/components/navs";
+@import "partials/components/spinners";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+svg {
+  width: 18px;
+  fill: currentColor;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  display: inline-block;
+}

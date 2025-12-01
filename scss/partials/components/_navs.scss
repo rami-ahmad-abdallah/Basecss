@@ -1,0 +1,223 @@
+@mixin nav($bg-color: white) {
+  height: $base-nav-height;
+  box-shadow: $base-nav-shadow;
+  background-color: $bg-color;
+  color: set-text-color($bg-color);
+  margin-bottom: $base-margin * 2;
+  padding: 0px $base-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > div {
+    height: $base-nav-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-brand {
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: set-text-color($bg-color);
+
+    a {
+      text-decoration: none;
+      color: set-text-color($bg-color);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .nav-menu {
+    .nav-item {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 0px $base-margin;
+
+      a {
+        text-decoration: none;
+        color: set-text-color($bg-color);
+        padding: $base-padding;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+
+        .arrow {
+          width: 14px;
+          transition: transform 0.3s ease;
+          transform: rotate(90deg);
+          display: flex;
+        }
+
+        &:hover,
+        &.active {
+          background: rgba(set-text-color($bg-color), 0.15);
+        }
+      }
+
+      .sub-links {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background: lighten($bg-color, 15%);
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: $base-radius;
+        padding: $base-padding;
+        box-shadow: 0 10px 10px -10px black;
+        margin-top: 5px;
+        z-index: 1000;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        transform: translate(-50%, 20px);
+        opacity: 0;
+        pointer-events: none;
+
+        &:last-of-type {
+          left: 0;
+        }
+
+        a {
+          width: 100%;
+          color: set-text-color($bg-color);
+        }
+      }
+
+      &.open-sub-links {
+        .sub-links {
+          transform: translate(-50%, 0px);
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        .arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .burger-close {
+      display: none;
+    }
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  @include on-md-screen-and-lower() {
+    .nav-menu {
+      width: 100vw;
+      height: 100vh;
+      background: rgba($bg-color, 0.86);
+      backdrop-filter: blur(2px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+      padding-top: 15%;
+      transition: transform 0.3s ease;
+      transform: translateX(100%);
+
+      .nav-item {
+        height: auto;
+        margin: 7px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        .sub-links {
+          position: static;
+          background: rgba(lighten($bg-color, 5%), 0.8);
+          width: max-content;
+          display: none;
+          margin-left: $base-margin;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          border-radius: $base-radius;
+          box-shadow: 0 10px 10px -10px black;
+          margin-top: 5px;
+          z-index: 1000;
+          transition: height 0.3s ease, opacity 0.3s ease;
+
+          transform: translate(0%, 0px);
+          opacity: 1;
+          pointer-events: all;
+
+          height: 100%;
+          overflow: hidden;
+          padding: 0;
+
+          &:last-of-type {
+            left: 0;
+          }
+
+          a {
+            width: 100%;
+            color: set-text-color($bg-color);
+            width: 100%;
+            text-align: left;
+            justify-content: left;
+          }
+        }
+
+        &.open-sub-links {
+          .sub-links {
+            display: flex;
+            transform: translate(0%, 0px);
+            opacity: 1;
+            pointer-events: all;
+          }
+
+          .arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .burger-close {
+        display: flex;
+      }
+
+      &.show-nav {
+        transform: translateX(45%);
+        box-shadow: 0 0 10px 0 black;
+      }
+    }
+
+    .burger {
+      display: flex;
+    }
+  }
+}
+
+@each $key, $value in $colors {
+  .nav-#{$key} {
+    @include nav($value);
+  }
+}

@@ -1,0 +1,45 @@
+@mixin close-btn($bg-color: white) {
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+
+  &::after {
+    content: "";
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: rgba(
+      lighten(set-text-color($bg-color), 50%),
+      $alpha: 0.2
+    );
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.1s ease;
+    transform-origin: center;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+  }
+
+  &:hover {
+    color: set-text-color($bg-color);
+
+    &::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+.container {
+  margin: 0px auto;
+  height: $base-nav-height;
+  @include on-lg-screen-and-lower() {
+    width: 100%;
+    background-color: $primary;
+  }
+
+  @include on-lg-screen-and-higher() {
+    width: 990px;
+    background-color: $danger;
+  }
+}

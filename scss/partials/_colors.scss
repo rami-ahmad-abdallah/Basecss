@@ -1,0 +1,11 @@
+// GENERATION BACKGROUND COLORS
+@each $key, $val in $colors {
+    .bg-#{$key} {
+        background-color: $val;
+        color: set-text-color($val);
+    }
+
+    .text-#{$key} {
+        color: $val;
+    }
+}
