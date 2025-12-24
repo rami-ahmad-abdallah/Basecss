@@ -4,13 +4,13 @@
     border-radius: $base-radius;
     text-decoration: none;
     text-transform: capitalize;
-    margin: $base-margin;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     cursor: pointer;
     text-align: center;
+    margin: $base-margin 0px;
 }
 
 @each $key, $val in $colors {
@@ -20,8 +20,8 @@
         color: set-text-color($val);
 
         &:hover {
-            background-color: darken($val, $amount: 5);
-            color: set-text-color(darken($val, $amount: 5));
+            background-color: darken($val, $amount: 7);
+            color: set-text-color(darken($val, $amount: 7));
         }
     }
 

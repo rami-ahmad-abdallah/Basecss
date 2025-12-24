@@ -1,10 +1,11 @@
-$primary: rgb(46, 136, 255);
+$primary: rgb(32, 111, 214);
 $accent: rgb(255, 129, 255);
 $success: rgb(56, 143, 56);
 $danger: rgb(207, 68, 68);
 $warning: rgb(255, 217, 0);
 $dark: rgb(70, 70, 70);
 $light: rgb(240, 240, 240);
+$transparent: rgba(255, 255, 255, 0.01);
 
 $colors: (
   "primary": $primary,
@@ -14,30 +15,12 @@ $colors: (
   "warning": $warning,
   "dark": $dark,
   "light": $light,
+  "transparent": $transparent,
 );
 
-$uMap: (
-  "p": "padding",
-  "pt": "padding-top",
-  "pr": "padding-right",
-  "pb": "padding-bottom",
-  "pl": "padding-left",
 
-  "m": "margin",
-  "mt": "margin-top",
-  "mr": "margin-right",
-  "mb": "margin-bottom",
-  "ml": "margin-left",
-);
 
-$utilitiesValues: (
-  0,
-  1,
-  2,
-  3,
-  4,
-  5
-);
+
 
 $base-padding: 10px;
 $base-margin: 7px;
@@ -49,3 +32,5 @@ $base-nav-height: 60px;
 $base-nav-shadow: 0 5px 10px -5px $dark;
 $base-spinner-size: 25px;
 $base-gap: 5px;
+$base-notification-mobile-width: 100%;
+$base-notification-large-width: 572px;

@@ -8,10 +8,8 @@
     width: 27px;
     height: 27px;
     border-radius: 50%;
-    background-color: rgba(
-      lighten(set-text-color($bg-color), 50%),
-      $alpha: 0.2
-    );
+    background-color: rgba(lighten(set-text-color($bg-color), 50%),
+        $alpha: 0.2);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,14 +30,17 @@
 
 .container {
   margin: 0px auto;
-  height: $base-nav-height;
+  padding: 0px $base-padding;
+
   @include on-lg-screen-and-lower() {
     width: 100%;
-    background-color: $primary;
   }
 
   @include on-lg-screen-and-higher() {
     width: 990px;
-    background-color: $danger;
+  }
+
+  @include on-xl-screen-and-higher() {
+    width: 1199px;
   }
 }

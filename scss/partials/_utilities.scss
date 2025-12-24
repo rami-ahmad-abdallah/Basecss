@@ -1,30 +1,43 @@
-@each $classStart, $property in $uMap {
-    @each $val in $utilitiesValues {
-        .#{$classStart}-#{$val} {
-            #{$property}: $val * $base-padding;
+$utilitiesMap: (
+    "p": "padding",
+    "pt": "padding-top",
+    "pr": "padding-right",
+    "pb": "padding-bottom",
+    "pl": "padding-left",
+
+    "m": "margin",
+    "mt": "margin-top",
+    "mr": "margin-right",
+    "mb": "margin-bottom",
+    "ml": "margin-left",
+);
+
+@each $prefix, $property in $utilitiesMap {
+    @for $i from 0 through 5 {
+        .#{$prefix}-#{$i} {
+            #{$property}: $i * $base-padding;
         }
     }
-
 }
 
-@each $val in $utilitiesValues {
-    .px-#{$val} {
-        padding-left: $val * $base-padding;
-        padding-right: $val * $base-padding;
+@for $i from 0 through 5 {
+    .px-#{$i} {
+        padding-left: $i * $base-padding;
+        padding-right: $i * $base-padding;
     }
 
-    .py-#{$val} {
-        padding-top: $val * $base-padding;
-        padding-bottom: $val * $base-padding;
+    .py-#{$i} {
+        padding-top: $i * $base-padding;
+        padding-bottom: $i * $base-padding;
     }
 
-    .mx-#{$val} {
-        margin-left: $val * $base-margin;
-        margin-right: $val * $base-margin;
+    .mx-#{$i} {
+        margin-left: $i * $base-margin;
+        margin-right: $i * $base-margin;
     }
 
-    .my-#{$val} {
-        margin-top: $val * $base-margin;
-        margin-bottom: $val * $base-margin;
+    .my-#{$i} {
+        margin-top: $i * $base-margin;
+        margin-bottom: $i * $base-margin;
     }
 }

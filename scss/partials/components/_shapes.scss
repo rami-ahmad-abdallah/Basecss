@@ -1,0 +1,16 @@
+@for $i from 1 through 100 {
+    .square-#{$i} {
+        width: #{$i}px;
+        height: #{$i}px;
+    }
+
+    .circle-#{$i} {
+        width: #{$i}px;
+        height: #{$i}px;
+        border-radius: 50%;
+    }
+
+    .radius-#{$i} {
+        border-radius: #{$i}px;
+    }
+}

@@ -29,9 +29,12 @@ document.addEventListener("click", (e) => {
   clickedItem = e.target.closest("div");
 
   if (!clickedItem) {
+    e.preventDefault();
     if (navMenuIsOpen) {
-      e.preventDefault();
       hideNavMenu();
+    }
+    if (subLinksIsOpen) {
+      closeCurrentOpenSubLinks();
     }
   } else if (clickedItem.classList.contains("nav-item")) {
     let hasSubLinks = clickedItem.querySelector(".sub-links");
@@ -65,9 +68,12 @@ document.addEventListener("click", (e) => {
   } else if (clickedItem.classList.contains("nav-menu")) {
     closeCurrentOpenSubLinks();
   } else {
+    e.preventDefault();
     if (navMenuIsOpen) {
-      e.preventDefault();
       hideNavMenu();
+    }
+    if (subLinksIsOpen) {
+      closeCurrentOpenSubLinks();
     }
   }
 });

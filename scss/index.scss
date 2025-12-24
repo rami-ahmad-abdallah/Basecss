@@ -12,6 +12,7 @@
 @import "partials/components/notifications";
 @import "partials/components/navs";
 @import "partials/components/spinners";
+@import "partials/components/shapes";
 
 *,
 *::after,
@@ -37,6 +38,5 @@ svg {
 .color-box {
   width: 30px;
   height: 30px;
-  margin: 10px;
   display: inline-block;
 }
