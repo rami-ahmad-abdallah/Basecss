@@ -3,12 +3,8 @@
   box-shadow: $base-shadow;
   overflow: hidden;
   margin: $base-margin * 2 0px;
-  width: $base-notification-large-width;
+  width: clamp(340px, 50%, 450px);
   display: inline-block;
-
-  @include on-md-screen-and-lower() {
-    width: 100%;
-  }
 
   .notification-head {
     display: flex;
@@ -24,7 +20,7 @@
   }
 
   .notification-body {
-    padding: $base-padding*2 $base-padding;
+    padding: $base-padding * 2 $base-padding;
   }
 }
 

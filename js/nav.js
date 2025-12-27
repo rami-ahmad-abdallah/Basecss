@@ -27,7 +27,7 @@ function hideNavMenu() {
 // EVENT DELEGATION
 document.addEventListener("click", (e) => {
   clickedItem = e.target.closest("div");
-
+  // console.log(clickedItem);
   if (!clickedItem) {
     e.preventDefault();
     if (navMenuIsOpen) {
@@ -68,8 +68,8 @@ document.addEventListener("click", (e) => {
   } else if (clickedItem.classList.contains("nav-menu")) {
     closeCurrentOpenSubLinks();
   } else {
-    e.preventDefault();
     if (navMenuIsOpen) {
+      e.preventDefault();
       hideNavMenu();
     }
     if (subLinksIsOpen) {

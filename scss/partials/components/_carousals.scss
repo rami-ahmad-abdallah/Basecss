@@ -1,0 +1,159 @@
+$carousal-control-color: rgba(255, 255, 255, 0.05);
+.carousal {
+  width: 100%;
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 7px;
+  margin-bottom: $base-margin;
+
+  .carousal-control {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    z-index: 5;
+    width: 3rem;
+    height: 100%;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    text-shadow: 0px 0px 7px black;
+    background: $carousal-control-color;
+    backdrop-filter: blur(3px);
+    opacity: 1;
+    pointer-events: all;
+
+    &.previous-btn {
+      left: 0;
+      box-shadow: 1px 0 7px 0px $carousal-control-color;
+      &:hover {
+        transform: translate(-10px, -50%);
+      }
+    }
+
+    &.next-btn {
+      right: 0;
+      box-shadow: -1px 0 7px 0px $carousal-control-color;
+      &:hover {
+        transform: translate(10px, -50%);
+      }
+    }
+
+    &.hide-control {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .carousal-items {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    gap: 25px;
+    height: inherit;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    pointer-events: none;
+
+    .carousal-item {
+      scroll-snap-align: center;
+      height: inherit;
+      width: 100%;
+      overflow: hidden;
+      flex: 0 0 auto;
+      position: relative;
+
+      .carousal-item-body {
+        width: inherit;
+        height: inherit;
+        position: relative;
+
+        img,
+        video {
+          width: inherit;
+          height: inherit;
+          position: absolute;
+
+          &:nth-of-type(1) {
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            filter: blur(7px);
+            top: -15px;
+            left: -15px;
+          }
+          &:nth-of-type(2) {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .carousal-item-text {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-10%, 0px);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 7px;
+        color: white;
+        backdrop-filter: blur(5px);
+        font-size: clamp(16px, 20px, 22px);
+        transition: transform 0.75s ease;
+      }
+
+      &.active {
+        .carousal-item-text {
+          transform: translate(-50%, 0px);
+        }
+      }
+    }
+  }
+
+  .carousal-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    display: flex;
+    gap: 10px;
+
+    .indicator {
+      background-color: #ffffff54;
+      box-shadow: 0 0 10px -1px black;
+
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+
+  // IF LETTERBOXING IS OFF
+  &[data-letterboxing="off"] {
+    .carousal-items {
+      .carousal-item-body {
+        img,
+        video {
+          width: inherit;
+          height: inherit;
+          position: absolute;
+
+          &:nth-of-type(1) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(0px);
+            top: 0px;
+            left: 0px;
+          }
+        }
+      }
+    }
+  }
+}

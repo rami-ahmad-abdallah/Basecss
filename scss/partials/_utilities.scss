@@ -1,43 +1,51 @@
 $utilitiesMap: (
-    "p": "padding",
-    "pt": "padding-top",
-    "pr": "padding-right",
-    "pb": "padding-bottom",
-    "pl": "padding-left",
+  "p": "padding",
+  "pt": "padding-top",
+  "pr": "padding-right",
+  "pb": "padding-bottom",
+  "pl": "padding-left",
 
-    "m": "margin",
-    "mt": "margin-top",
-    "mr": "margin-right",
-    "mb": "margin-bottom",
-    "ml": "margin-left",
+  "m": "margin",
+  "mt": "margin-top",
+  "mr": "margin-right",
+  "mb": "margin-bottom",
+  "ml": "margin-left",
 );
 
 @each $prefix, $property in $utilitiesMap {
-    @for $i from 0 through 5 {
-        .#{$prefix}-#{$i} {
-            #{$property}: $i * $base-padding;
-        }
+  @for $i from 0 through 5 {
+    .#{$prefix}-#{$i} {
+      #{$property}: $i * $base-padding;
     }
+  }
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.my-auto {
+  margin: auto 0;
 }
 
 @for $i from 0 through 5 {
-    .px-#{$i} {
-        padding-left: $i * $base-padding;
-        padding-right: $i * $base-padding;
-    }
+  .px-#{$i} {
+    padding-left: $i * $base-padding;
+    padding-right: $i * $base-padding;
+  }
 
-    .py-#{$i} {
-        padding-top: $i * $base-padding;
-        padding-bottom: $i * $base-padding;
-    }
+  .py-#{$i} {
+    padding-top: $i * $base-padding;
+    padding-bottom: $i * $base-padding;
+  }
 
-    .mx-#{$i} {
-        margin-left: $i * $base-margin;
-        margin-right: $i * $base-margin;
-    }
+  .mx-#{$i} {
+    margin-left: $i * $base-margin;
+    margin-right: $i * $base-margin;
+  }
 
-    .my-#{$i} {
-        margin-top: $i * $base-margin;
-        margin-bottom: $i * $base-margin;
-    }
+  .my-#{$i} {
+    margin-top: $i * $base-margin;
+    margin-bottom: $i * $base-margin;
+  }
 }

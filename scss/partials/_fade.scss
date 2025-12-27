@@ -1,0 +1,20 @@
+.fade {
+  transition: transform 0.75s ease, opacity 0.75s ease;
+  opacity: 0;
+}
+.fade-up {
+  transform: rotate(1deg) translateY(50px);
+}
+
+.fade-right {
+  transform: translateX(50px);
+}
+
+.fade-left {
+  transform: translateX(-50px);
+}
+
+.show-fade {
+  opacity: 1;
+  transform: rotate(0deg) translate(0px, 0px);
+}

@@ -7,6 +7,7 @@
     <title>Base CSS Library</title>
 
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="shortcut icon" href="https://placehold.co/10" type="image/x-icon">
 </head>
 
 <body>
@@ -100,7 +101,6 @@
             <div class="color-box bg-light"></div>
         </section>
 
-
         <section class="mb-5 buttons">
             <h3>Buttons</h3>
             <button class="btn btn-primary">primary Button</button>
@@ -112,7 +112,6 @@
             <button class="btn btn-light">light Button</button>
         </section>
 
-
         <section class="mb-5 buttons-outlined">
             <h3>Outlined Buttons</h3>
             <button class="btn btn-primary-outlined">primary outlined</button>
@@ -123,7 +122,6 @@
             <button class="btn btn-dark-outlined">dark outlined</button>
             <button class="btn btn-light-outlined">light outlined</button>
         </section>
-
 
         <section class="mb-5 buttons-outlined">
             <h3>Outlined Buttons with icons</h3>
@@ -175,7 +173,6 @@
             </button>
         </section>
 
-
         <section class="mb-5 cards">
             <h3>Cards</h3>
             <div class="card">
@@ -209,21 +206,21 @@
                     explicabo.
                 </div>
             </div>
-            <div class="card card-danger">
+            <div class="card card-danger fade fade-up">
                 <div class="card-head">Danger Card Head</div>
                 <div class="card-body">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                     explicabo.
                 </div>
             </div>
-            <div class="card card-warning">
+            <div class="card card-warning fade fade-up">
                 <div class="card-head">Warning Card Head</div>
                 <div class="card-body">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                     explicabo.
                 </div>
             </div>
-            <div class="card card-dark">
+            <div class="card card-dark fade fade-up">
                 <div class="card-head">Dark Card Head</div>
                 <div class="card-body">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
@@ -238,7 +235,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="mb-5 notifications">
             <h3>notifications</h3>
@@ -319,7 +315,6 @@
             </div>
         </section>
 
-
         <section class="mb-5">
             <h3>Spinners</h3>
             <div class="spinners flex align-center justify-center gap-3">
@@ -364,10 +359,123 @@
 
         </section>
 
+        <section class="mb-5">
+            <div class="carousal" data-letterboxing="off">
+                <div class="carousal-items">
+                    <div class="carousal-item">
+                        <div class="carousal-item-body">
+                            <img src="https://picsum.photos/1440/720" alt="carousal-image">
+                        </div>
+                        <div class="carousal-item-text">
+                            Lorem ipsum dolor sit amet consectetur. 1
+                        </div>
+                    </div>
 
+                    <div class="carousal-item">
+                        <div class="carousal-item-body">
+                            <img src="https://picsum.photos/1440/720" alt="carousal-image">
+                        </div>
+                        <div class="carousal-item-text">
+                            Lorem ipsum dolor sit amet consectetur. 2
+                        </div>
+                    </div>
 
+                    <div class="carousal-item">
+                        <div class="carousal-item-body">
+                            <img src="https://picsum.photos/1440/720" alt="carousal-image">
+                        </div>
+                        <div class="carousal-item-text">
+                            Lorem ipsum dolor sit amet consectetur. 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="mb-3">Forms</h3>
+            <form action="#" class="form bg-light" autocomplete="off">
+                <div class="form-head  ">
+                    <!-- <img src="https://placehold.co/10" class="square-80 contain-image" alt="form image"> -->
+                    <h2 class="form-title">Form Title</h2>
+                </div>
+                <div class="field">
+                    <label for="example-1">Example text input</label>
+                    <input type="text" id="example-1" placeholder="example">
+                    <div class="form-error">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi?
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="example-2">Example text area</label>
+                    <textarea name="" id="example-2" placeholder="text area example"></textarea>
+                    <div class="form-error">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi?
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="select-example">Example select</label>
+                    <select name="#" id="select-example">
+                        <option value="">option 1</option>
+                        <option value="">option 2</option>
+                        <option value="">option 3</option>
+                        <option value="">option 4</option>
+                    </select>
+                    <div class="form-error">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi?
+                    </div>
+                </div>
+                <div class="field">
+                    Checkbox
+                    <div class="group">
+                        <input type="checkbox" name="choice" id="c1" value="c1">
+                        <label for="c1">Lorem.</label>
+                    </div>
+                    <div class="group">
+                        <input type="checkbox" name="choice" id="c2" value="c2">
+                        <label for="c2">Lorem, ipsum..</label>
+                    </div>
+
+                    <div class="form-error">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi?
+                    </div>
+                </div>
+
+                <div class="field">
+                    Gender
+                    <div class="group">
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="group">
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                    </div>
+
+                    <div class="form-error">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi?
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input type="file" name="avatar" id="avatar">
+                    <label for="avatar">Choose Avatar <p>choosen avatar.png</p></label>
+
+                    <div class="form-error">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi?
+                    </div>
+                </div>
+            </form>
+        </section>
     </div>
+
+
     <script src="./js/nav.js"></script>
+    <script src="./js/fade.js"></script>
+    <script src="./js/carousal.js"></script>
+
 </body>
 
 </html>
