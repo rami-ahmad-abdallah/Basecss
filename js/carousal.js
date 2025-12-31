@@ -2,7 +2,7 @@
 function makePreviousBtn(carousalId) {
   // PREVIOUS BUTTON
   const previousBtn = document.createElement("button");
-  previousBtn.classList.add("carousal-control", "previous-btn");
+  previousBtn.classList.add("carousal-control", "previous-btn", "hide-control");
   previousBtn.id = `previous-btn-${carousalId}`;
   previousBtn.innerHTML = "&#10094;";
 
@@ -23,7 +23,7 @@ function makeNextBtn(carousalId) {
 // FUNCTION THAT WILL MAKE A INDICATOR INDICATING THE ITEMS IN THE CAROUSAL
 function makeIndicator(carousalId) {
   let indicator = document.createElement("div");
-  indicator.classList.add("circle-15", "indicator");
+  indicator.classList.add("circle-12", "indicator");
 
   return indicator;
 }
@@ -48,22 +48,37 @@ function scrollItemToView(carousal, itemNumber) {
   }
 }
 
+// FUNCTION TO MAKE THE INDICATOR FOR AUTO CAROUSAL
+function makeAutoIndicator(carousal) {
+  let autoCarousalIndicator = document.createElement("div");
+  autoCarousalIndicator.classList.add("auto-carousal-indicator");
+
+  let itemProgress = document.createElement("div");
+  itemProgress.classList.add("item-progress");
+
+  autoCarousalIndicator.appendChild(itemProgress);
+
+  return autoCarousalIndicator;
+}
+
 // GET ALL THE CAROUSALS IN THE DOCUMENT
 let carousals = document.querySelectorAll(".carousal");
 
 // PREPARING EACH CAROUSAL
 carousals.forEach((carousal, carousalNumber) => {
   // SETTING THE CAROUSAL ID FOR USE LATER
-  carousal.id = `c-${carousalNumber}`;
+  carousal.id = `carousal-${carousalNumber}`;
 
   // GETTING ALL ITEMS INSIDE THE CAROUSAL
   let carousalItems = carousal.querySelectorAll(".carousal-item");
 
-  // ADDING PREVIOUS AND NEXT BUTTONS FOR THE CAROUSAL
-  carousal.appendChild(makePreviousBtn(carousalNumber));
-  carousal.appendChild(makeNextBtn(carousalNumber));
+  // ADDING PREVIOUS AND NEXT BUTTONS FOR THE CAROUSAL IF IT IS NOT OFF
+  if (carousal.dataset.controls != "off") {
+    carousal.appendChild(makePreviousBtn(carousalNumber));
+    carousal.appendChild(makeNextBtn(carousalNumber));
+  }
 
-  // ADD INDICATORS IF IT IS ON
+  // ADD INDICATORS IF IT IS NOT OFF
   if (carousal.dataset.indicators != "off") {
     let indicators = document.createElement("div");
     indicators.classList.add("carousal-indicators");
@@ -78,6 +93,7 @@ carousals.forEach((carousal, carousalNumber) => {
     carousal.appendChild(indicators);
   }
 
+  // DUPLICATE THE IMAGE OR VIDEO OR WHATEVER THE ITEM BODY IS TO AVOID LETTER BOXING IF IT IS NOT OFF
   if (carousal.dataset.letterboxing != "off") {
     // COPYING WHATEVER THE ITEM BODY HOLDS //E.G IMAGE VIDEO TO AVOID LETTERBOXING EFFECT
     carousalItems.forEach((item, itemNumber) => {
@@ -90,8 +106,10 @@ carousals.forEach((carousal, carousalNumber) => {
     });
   }
 
-  // HIDE PREVIOUS BUTTON IN THE INITIALIZING PHASE
-  carousal.querySelector(".previous-btn").classList.add("hide-control");
+  // ADDING ITEM PROGRESS IF IT IS NOT OFF
+  if (carousal.dataset.auto == "on") {
+    carousal.appendChild(makeAutoIndicator(carousal));
+  }
 
   // INITIALIZE FIRST CAROUSAL ITEM
   carousalItems[0].classList.add("active");

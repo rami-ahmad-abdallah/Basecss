@@ -657,7 +657,7 @@
 .btn, .btn-transparent-outlined, .btn-transparent, .btn-light-outlined, .btn-light, .btn-dark-outlined, .btn-dark, .btn-warning-outlined, .btn-warning, .btn-danger-outlined, .btn-danger, .btn-success-outlined, .btn-success, .btn-accent-outlined, .btn-accent, .btn-primary-outlined, .btn-primary {
   padding: 10px;
   border: 0;
-  border-radius: 7px;
+  border-radius: 5px;
   text-decoration: none;
   text-transform: capitalize;
   display: inline-flex;
@@ -822,7 +822,7 @@
 }
 
 .card {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -837,7 +837,7 @@
 }
 
 .card-primary {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -852,7 +852,7 @@
 }
 
 .card-accent {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -867,7 +867,7 @@
 }
 
 .card-success {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -882,7 +882,7 @@
 }
 
 .card-danger {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -897,7 +897,7 @@
 }
 
 .card-warning {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -912,7 +912,7 @@
 }
 
 .card-dark {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -927,7 +927,7 @@
 }
 
 .card-light {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -942,7 +942,7 @@
 }
 
 .card-transparent {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -957,7 +957,7 @@
 }
 
 .notification {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1002,7 +1002,7 @@
 }
 
 .notification-primary {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1047,7 +1047,7 @@
 }
 
 .notification-accent {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1092,7 +1092,7 @@
 }
 
 .notification-success {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1137,7 +1137,7 @@
 }
 
 .notification-danger {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1182,7 +1182,7 @@
 }
 
 .notification-warning {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1227,7 +1227,7 @@
 }
 
 .notification-dark {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1272,7 +1272,7 @@
 }
 
 .notification-light {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1317,7 +1317,7 @@
 }
 
 .notification-transparent {
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 0 0px 10px -5px rgb(70, 70, 70);
   overflow: hidden;
   margin: 14px 0px;
@@ -1436,7 +1436,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -1505,7 +1505,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -1621,7 +1621,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -1690,7 +1690,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -1806,7 +1806,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -1875,7 +1875,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -1991,7 +1991,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -2060,7 +2060,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -2176,7 +2176,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -2245,7 +2245,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -2361,7 +2361,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -2430,7 +2430,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -2546,7 +2546,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -2615,7 +2615,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -2731,7 +2731,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 10px;
   box-shadow: 0 10px 10px -10px black;
   z-index: 1000;
@@ -2800,7 +2800,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border-radius: 7px;
+    border-radius: 5px;
     margin-top: 5px;
     z-index: 1000;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -4439,45 +4439,8 @@
   position: relative;
   height: 80vh;
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: 5px;
   margin-bottom: 7px;
-}
-.carousal .carousal-control {
-  position: absolute;
-  top: 50%;
-  transform: translate(0px, -50%);
-  z-index: 5;
-  width: 3rem;
-  height: 100%;
-  border: 0;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-  transition: all 0.3s ease;
-  text-shadow: 0px 0px 7px black;
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  opacity: 1;
-  pointer-events: all;
-}
-.carousal .carousal-control.previous-btn {
-  left: 0;
-  box-shadow: 1px 0 7px 0px rgba(255, 255, 255, 0.05);
-}
-.carousal .carousal-control.previous-btn:hover {
-  transform: translate(-10px, -50%);
-}
-.carousal .carousal-control.next-btn {
-  right: 0;
-  box-shadow: -1px 0 7px 0px rgba(255, 255, 255, 0.05);
-}
-.carousal .carousal-control.next-btn:hover {
-  transform: translate(10px, -50%);
-}
-.carousal .carousal-control.hide-control {
-  opacity: 0;
-  pointer-events: none;
 }
 .carousal .carousal-items {
   display: flex;
@@ -4511,29 +4474,34 @@
 }
 .carousal .carousal-items .carousal-item .carousal-item-body img:nth-of-type(1),
 .carousal .carousal-items .carousal-item .carousal-item-body video:nth-of-type(1) {
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
-  filter: blur(7px);
-  top: -15px;
-  left: -15px;
+  object-fit: cover;
+  filter: blur(20px);
+  transform: scale(1.1);
 }
 .carousal .carousal-items .carousal-item .carousal-item-body img:nth-of-type(2),
 .carousal .carousal-items .carousal-item .carousal-item-body video:nth-of-type(2) {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: clamp(345px, 90%, 85%);
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 0 0 10px -5px black;
 }
 .carousal .carousal-items .carousal-item .carousal-item-text {
   position: absolute;
-  bottom: 50px;
+  bottom: 80px;
   left: 50%;
   transform: translate(-10%, 0px);
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
-  border-radius: 7px;
+  border-radius: 5px;
   color: white;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -4542,6 +4510,37 @@
 }
 .carousal .carousal-items .carousal-item.active .carousal-item-text {
   transform: translate(-50%, 0px);
+}
+.carousal .carousal-control {
+  position: absolute;
+  bottom: 10px;
+  z-index: 5;
+  padding: 10px;
+  border: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  text-shadow: 0px 0px 7px black;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  opacity: 1;
+  pointer-events: all;
+  border-radius: 5px;
+}
+.carousal .carousal-control:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.carousal .carousal-control.previous-btn {
+  left: 10px;
+}
+.carousal .carousal-control.next-btn {
+  right: 10px;
+}
+.carousal .carousal-control.hide-control {
+  opacity: 0;
+  pointer-events: none;
 }
 .carousal .carousal-indicators {
   position: absolute;
@@ -4553,11 +4552,32 @@
   gap: 10px;
 }
 .carousal .carousal-indicators .indicator {
-  background-color: rgba(255, 255, 255, 0.3294117647);
-  box-shadow: 0 0 10px -1px black;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 10px 0px black, 0 0 15px 3px white;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .carousal .carousal-indicators .indicator.active {
   background-color: white;
+}
+.carousal .auto-carousal-indicator {
+  height: 25px;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.231372549);
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px -1px black;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.carousal .auto-carousal-indicator .item-progress {
+  background: rgb(255, 255, 255);
+  height: 100%;
+  width: 10%;
 }
 .carousal[data-letterboxing=off] .carousal-items .carousal-item-body img,
 .carousal[data-letterboxing=off] .carousal-items .carousal-item-body video {

@@ -1,51 +1,13 @@
 $carousal-control-color: rgba(255, 255, 255, 0.05);
+$carousal-control-hover: rgba(255, 255, 255, 0.25);
+$carousal-border-radius: $base-radius;
 .carousal {
   width: 100%;
   position: relative;
   height: 80vh;
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: $carousal-border-radius;
   margin-bottom: $base-margin;
-
-  .carousal-control {
-    position: absolute;
-    top: 50%;
-    transform: translate(0px, -50%);
-    z-index: 5;
-    width: 3rem;
-    height: 100%;
-    border: 0;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    transition: all 0.3s ease;
-    text-shadow: 0px 0px 7px black;
-    background: $carousal-control-color;
-    backdrop-filter: blur(3px);
-    opacity: 1;
-    pointer-events: all;
-
-    &.previous-btn {
-      left: 0;
-      box-shadow: 1px 0 7px 0px $carousal-control-color;
-      &:hover {
-        transform: translate(-10px, -50%);
-      }
-    }
-
-    &.next-btn {
-      right: 0;
-      box-shadow: -1px 0 7px 0px $carousal-control-color;
-      &:hover {
-        transform: translate(10px, -50%);
-      }
-    }
-
-    &.hide-control {
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
 
   .carousal-items {
     display: flex;
@@ -78,29 +40,35 @@ $carousal-control-color: rgba(255, 255, 255, 0.05);
           position: absolute;
 
           &:nth-of-type(1) {
-            width: 110%;
-            height: 110%;
-            object-fit: cover;
-            filter: blur(7px);
-            top: -15px;
-            left: -15px;
-          }
-          &:nth-of-type(2) {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            -o-object-fit: cover;
+            object-fit: cover;
+            filter: blur(20px);
+            transform: scale(1.1);
+          }
+          &:nth-of-type(2) {
+            width: clamp(345px, 90%, 85%);
+            height: 90%;
+            object-fit: cover;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: $carousal-border-radius;
+            box-shadow: 0 0 10px -5px black;
           }
         }
       }
 
       .carousal-item-text {
         position: absolute;
-        bottom: 50px;
+        bottom: 80px;
         left: 50%;
         transform: translate(-10%, 0px);
         background: rgba(0, 0, 0, 0.5);
         padding: 10px;
-        border-radius: 7px;
+        border-radius: $carousal-border-radius;
         color: white;
         backdrop-filter: blur(5px);
         font-size: clamp(16px, 20px, 22px);
@@ -115,6 +83,41 @@ $carousal-control-color: rgba(255, 255, 255, 0.05);
     }
   }
 
+  .carousal-control {
+    position: absolute;
+    bottom: 10px;
+    z-index: 5;
+    padding: 10px;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    text-shadow: 0px 0px 7px black;
+    background: $carousal-control-color;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    pointer-events: all;
+    border-radius: 5px;
+
+    &:hover {
+      background: $carousal-control-hover;
+    }
+
+    &.previous-btn {
+      left: 10px;
+    }
+
+    &.next-btn {
+      right: 10px;
+    }
+
+    &.hide-control {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
   .carousal-indicators {
     position: absolute;
     bottom: 10px;
@@ -125,12 +128,33 @@ $carousal-control-color: rgba(255, 255, 255, 0.05);
     gap: 10px;
 
     .indicator {
-      background-color: #ffffff54;
-      box-shadow: 0 0 10px -1px black;
+      background-color: rgb(255 255 255 / 0%);
+      box-shadow: 0 0 10px 0px black, 0 0 15px 3px white;
+      backdrop-filter: blur(5px);
 
       &.active {
         background-color: white;
       }
+    }
+  }
+
+  .auto-carousal-indicator {
+    height: 25px;
+    width: 250px;
+    background: #ffffff3b;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px -1px black;
+    backdrop-filter: blur(5px);
+
+    .item-progress {
+      background: rgb(255, 255, 255);
+      height: 100%;
+      width: 10%;
     }
   }
 

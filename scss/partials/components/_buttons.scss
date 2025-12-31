@@ -1,39 +1,39 @@
 .btn {
-    padding: $base-padding ;
-    border: 0;
-    border-radius: $base-radius;
-    text-decoration: none;
-    text-transform: capitalize;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    text-align: center;
-    margin: $base-margin 0px;
+  padding: $base-padding;
+  border: 0;
+  border-radius: $base-radius;
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin: $base-margin 0px;
 }
 
 @each $key, $val in $colors {
-    .btn-#{$key} {
-        @extend .btn;
-        background-color: $val;
-        color: set-text-color($val);
+  .btn-#{$key} {
+    @extend .btn;
+    background-color: $val;
+    color: set-text-color($val);
 
-        &:hover {
-            background-color: darken($val, $amount: 7);
-            color: set-text-color(darken($val, $amount: 7));
-        }
+    &:hover {
+      background-color: darken($val, $amount: 7);
+      color: set-text-color(darken($val, $amount: 7));
     }
+  }
 
-    .btn-#{$key}-outlined {
-        @extend .btn;
-        border: $base-border solid $val;
-        color: $val;
-        background-color: white;
+  .btn-#{$key}-outlined {
+    @extend .btn;
+    border: $base-border solid $val;
+    color: $val;
+    background-color: white;
 
-        &:hover {
-            color: set-text-color($val);
-            background-color: $val;
-        }
+    &:hover {
+      color: set-text-color($val);
+      background-color: $val;
     }
+  }
 }
