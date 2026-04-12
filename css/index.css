@@ -1474,8 +1474,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -1659,8 +1658,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -1844,8 +1842,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -2029,8 +2026,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -2214,8 +2210,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -2399,8 +2394,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -2584,8 +2578,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -2769,8 +2762,7 @@
     width: fit-content;
     height: 100vh;
     background: rgba(70, 70, 70, 0.7);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
     position: fixed;
     top: 0;
     right: 0;
@@ -4503,8 +4495,7 @@
   padding: 10px;
   border-radius: 5px;
   color: white;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   font-size: 20px;
   transition: transform 0.75s ease;
 }
@@ -4523,8 +4514,7 @@
   transition: all 0.3s ease;
   text-shadow: 0px 0px 7px black;
   background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   opacity: 1;
   pointer-events: all;
   border-radius: 5px;
@@ -4552,10 +4542,9 @@
   gap: 10px;
 }
 .carousal .carousal-indicators .indicator {
-  background-color: rgba(255, 255, 255, 0);
-  box-shadow: 0 0 10px 0px black, 0 0 15px 3px white;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 2px white;
+  backdrop-filter: blur(5px);
 }
 .carousal .carousal-indicators .indicator.active {
   background-color: white;
@@ -4571,8 +4560,7 @@
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 10px -1px black;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .carousal .auto-carousal-indicator .item-progress {
   background: rgb(255, 255, 255);

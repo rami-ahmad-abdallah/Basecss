@@ -1,6 +1,7 @@
 $carousal-control-color: rgba(255, 255, 255, 0.05);
 $carousal-control-hover: rgba(255, 255, 255, 0.25);
 $carousal-border-radius: $base-radius;
+
 .carousal {
   width: 100%;
   position: relative;
@@ -47,6 +48,7 @@ $carousal-border-radius: $base-radius;
             filter: blur(20px);
             transform: scale(1.1);
           }
+
           &:nth-of-type(2) {
             width: clamp(345px, 90%, 85%);
             height: 90%;
@@ -128,8 +130,8 @@ $carousal-border-radius: $base-radius;
     gap: 10px;
 
     .indicator {
-      background-color: rgb(255 255 255 / 0%);
-      box-shadow: 0 0 10px 0px black, 0 0 15px 3px white;
+      background-color: rgb(255 255 255 / 10%);
+      box-shadow: 0 0 1px 2px white;
       backdrop-filter: blur(5px);
 
       &.active {
@@ -162,6 +164,7 @@ $carousal-border-radius: $base-radius;
   &[data-letterboxing="off"] {
     .carousal-items {
       .carousal-item-body {
+
         img,
         video {
           width: inherit;
