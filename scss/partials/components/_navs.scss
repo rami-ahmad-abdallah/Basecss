@@ -124,7 +124,7 @@
     cursor: pointer;
   }
 
-  @include on-md-screen-and-lower() {
+  @include mobile-view() {
     .nav-menu {
       width: fit-content;
       height: 100vh;

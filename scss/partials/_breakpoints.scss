@@ -6,62 +6,68 @@ $bp: (
   "xl": 1200px,
 );
 
-@mixin on-xs-screen-and-lower() {
-  @media (max-width: map_get($bp,"xs")) {
+// @mixin on-xs-screen-and-lower() {
+//   @media (max-width: map_get($bp, "xs")) {
+//     @content;
+//   }
+// }
+
+@mixin mobile-view() {
+  @media (max-width: map_get($bp, "md")) {
     @content;
   }
 }
 
-@mixin on-sm-screen-and-lower() {
-  @media (max-width: map_get($bp,"sm")) {
+@mixin desktop-view() {
+  @media(min-width:map_get($bp, "md")) {
     @content;
   }
 }
 
-@mixin on-md-screen-and-lower() {
-  @media (max-width: map_get($bp,"md")) {
-    @content;
-  }
-}
+// @mixin tablet() {
+//   @media (max-width: map_get($bp, "md")) {
+//     @content;
+//   }
+// }
 
-@mixin on-lg-screen-and-lower() {
-  @media (max-width: map_get($bp,"lg")) {
-    @content;
-  }
-}
+// @mixin laptop() {
+//   @media (max-width: map_get($bp, "lg")) {
+//     @content;
+//   }
+// }
 
-@mixin on-xl-screen-and-lower() {
-  @media (max-width: map_get($bp,"xl")) {
-    @content;
-  }
-}
+// @mixin desktop() {
+//   @media (max-width: map_get($bp, "xl")) {
+//     @content;
+//   }
+// }
 
-@mixin on-xs-screen-and-higher() {
-  @media (min-width: map_get($bp,"xs")) {
-    @content;
-  }
-}
+// @mixin on-xs-screen-and-higher() {
+//   @media (min-width: map_get($bp, "xs")) {
+//     @content;
+//   }
+// }
 
-@mixin on-sm-screen-and-higher() {
-  @media (min-width: map_get($bp,"sm")) {
-    @content;
-  }
-}
+// @mixin on-sm-screen-and-higher() {
+//   @media (min-width: map_get($bp, "sm")) {
+//     @content;
+//   }
+// }
 
-@mixin on-md-screen-and-higher() {
-  @media (min-width: map_get($bp,"md")) {
-    @content;
-  }
-}
+// @mixin on-md-screen-and-higher() {
+//   @media (min-width: map_get($bp, "md")) {
+//     @content;
+//   }
+// }
 
-@mixin on-lg-screen-and-higher() {
-  @media (min-width: map_get($bp,"lg")) {
-    @content;
-  }
-}
+// @mixin on-lg-screen-and-higher() {
+//   @media (min-width: map_get($bp, "lg")) {
+//     @content;
+//   }
+// }
 
-@mixin on-xl-screen-and-higher() {
-  @media (min-width: map_get($bp,"xl")) {
-    @content;
-  }
-}
+// @mixin on-xl-screen-and-higher() {
+//   @media (min-width: map_get($bp, "xl")) {
+//     @content;
+//   }
+// }
